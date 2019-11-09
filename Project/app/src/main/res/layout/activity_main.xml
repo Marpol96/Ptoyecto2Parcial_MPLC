@@ -11,7 +11,7 @@
         android:layout_width="160dp"
         android:layout_height="31dp"
         android:text="@string/text_Points"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/Vista3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toEndOf="@+id/text_Puntuacion"
@@ -20,7 +20,7 @@
         tools:text="@string/text_Points" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Vista1"
         android:layout_width="125dp"
         android:layout_height="128dp"
         android:layout_marginStart="4dp"
@@ -29,12 +29,12 @@
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/Vista3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/Vista2"
         tools:layout_editor_absoluteY="152dp"
         tools:srcCompat="@tools:sample/avatars[15]" />
 
@@ -43,18 +43,18 @@
         android:layout_width="91dp"
         android:layout_height="55dp"
         android:layout_marginTop="72dp"
-        android:text="Button"
+        android:text="@string/Button_Play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Vista2" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Vista2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/Vista1"
         app:layout_constraintTop_toBottomOf="@+id/text_Points"
         tools:srcCompat="@tools:sample/avatars[3]" />
 
@@ -64,7 +64,7 @@
         android:layout_height="26dp"
         android:layout_marginStart="24dp"
         android:text="@string/text_Puntuacion"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/Vista1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.726"

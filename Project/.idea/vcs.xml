@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/ProyectoTragamedas2doParcial" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Ptoyecto2Parcial_MPLC" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Tragamonedas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
   </component>
 </project>
