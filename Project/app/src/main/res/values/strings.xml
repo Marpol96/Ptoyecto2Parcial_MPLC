@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+
+    <!-- Activity Main-->
+    <string name="text_Puntuacion">Puntuacion</string>
+    <string name="text_Points">000,000</string>
+
+    <string name="Button_Play">Iniciar</string>
+</resources>
