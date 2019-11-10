@@ -87,6 +87,56 @@ class MainActivity : AppCompatActivity() {
             slot13()
             slot21()
             slot31()
+        }else if((s1==2)&&(s2==2)&&(s3==1)){
+            slot12()
+            slotimagen2()
+            slot31()
+        }else if((s1==2)&&(s2==2)&&(s3==3)){
+            slot12()
+            slotimagen2()
+            slotimagen3()
+        }else if((s1==2)&&(s2==1)&&(s3==2)){
+            slot12()
+            slot21()
+            slot32()
+        }else if((s1==2)&&(s2==3)&&(s3==2)){
+            slot12()
+            slot23()
+            slot32()
+        }else if((s1==1)&&(s2==2)&&(s3==2)){
+            slotimagen1()
+            slotimagen2()
+            slot32()
+        }else if((s1==3)&&(s2==2)&&(s3==2)){
+            slot13()
+            slotimagen2()
+            slot32()
+        }else if((s1==3)&&(s2==3)&&(s3==1)){
+            slot13()
+            slot23()
+            slot31()
+        }else if((s1==3)&&(s2==3)&&(s3==2)){
+            slot13()
+            slot23()
+            slot32()
+        }else if((s1==3)&&(s2==1)&&(s3==3)){
+            slot13()
+            slot21()
+            slotimagen3()
+        }else if((s1==3)&&(s2==2)&&(s3==3)){
+            slot13()
+            slotimagen2()
+            slotimagen3()
+        }else if((s1==1)&&(s2==3)&&(s3==3)){
+            slotimagen1()
+            slot23()
+            slotimagen3()
+        }else if((s1==2)&&(s2==3)&&(s3==3)){
+            slot12()
+            slot23()
+            slotimagen3()
+        }else{
+            Toast.makeText(this,"No Existe Combinacion!",Toast.LENGTH_SHORT).show()
         }
     }
     fun slot12(){
