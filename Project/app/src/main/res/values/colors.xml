@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#FFBD87</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4-->
-    <color name="colorBackground">#339c27b0</color>
+    <color name="colorBackground">#FFBD87</color>
 </resources>
