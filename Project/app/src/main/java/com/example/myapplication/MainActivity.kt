@@ -19,19 +19,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Button_Play.setOnClickListener{
             ChekcApuesta()
-            jugarya()
         }
     }
 
     fun ChekcApuesta(){
-        if(text_Apuesta.text.toString().isEmpty()){
+        if(text_apues.text.toString().isEmpty()){
             Toast.makeText(this,"No se Puede Empesar Sin Una Apuesta",Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(this,"Suerte!",Toast.LENGTH_SHORT).show()
+            jugarya()
         }
     }
     fun moverimagenes(): Int {
-        return mRandom.nextInt(3 -1)+1
+        return mRandom.nextInt(4 -1)+1
     }
 
     fun jugarya(){
