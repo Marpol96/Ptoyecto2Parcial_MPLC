@@ -130,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.2" />
 
     <TextView
         android:id="@+id/text_apuesta"
@@ -141,8 +141,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608"
+        app:layout_constraintTop_toBottomOf="@+id/Button_Play"
+        app:layout_constraintVertical_bias="0.063"
         tools:text="@string/text_Apuestatitulo" />
 
     <TextView
@@ -150,35 +150,48 @@
         android:layout_width="71dp"
         android:layout_height="33dp"
         android:contentDescription="@string/text_Apuesta"
-        android:text="TextView"
+        android:text="@string/text_Apuesta"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/text_apuesta"
-        tools:layout_editor_absoluteY="424dp"
+        app:layout_constraintTop_toBottomOf="@+id/Button_Play"
+        app:layout_constraintVertical_bias="0.063"
         tools:text="@string/text_Apuesta" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_Bajar"
         android:layout_width="82dp"
         android:layout_height="42dp"
-        android:text="Button"
+        android:text="@string/Button_Bajar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/text_apuesta"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button_Play"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.024"
+        tools:text="@string/Button_Bajar" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_Subir"
         android:layout_width="83dp"
         android:layout_height="43dp"
-        android:text="Button"
+        android:text="@string/Button_Subir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/text_apues"
         app:layout_constraintTop_toBottomOf="@+id/Button_Play"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.024"
+        tools:text="@string/Button_Subir" />
+
+    <Button
+        android:id="@+id/button_Acerca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Acerca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/Button_Acerca" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

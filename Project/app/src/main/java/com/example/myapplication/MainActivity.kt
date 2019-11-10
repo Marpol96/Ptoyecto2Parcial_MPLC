@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         Button_Play.setOnClickListener{
             ChekcApuesta()
         }
+        button_Subir.setOnClickListener(){
+            val Apuesta=Integer.valueOf(text_apues.text.toString())
+            if(text_apues.text.toString()<text_Credit.text.toString()){
+                Apuesta==Apuesta+10
+                text_apues.setText(Apuesta)
+            }
+        }
     }
 
     fun ChekcApuesta(){

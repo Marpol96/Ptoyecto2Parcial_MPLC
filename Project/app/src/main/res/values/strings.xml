@@ -18,4 +18,6 @@
 
     <string name="Button_Subir">Subir</string>
     <string name="Button_Bajar">Bajar</string>
+
+    <string name="Button_Acerca">Acerca de...</string>
 </resources>
