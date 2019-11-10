@@ -12,6 +12,8 @@ import java.util.Random
 class MainActivity : AppCompatActivity() {
 
     val mRandom=Random()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,36 +31,86 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun moverimagenes(): Int {
-        Vista1.setImageResource(R.drawable.mover)
-        Vista2.setImageResource(R.drawable.mover)
-        Vista3.setImageResource(R.drawable.mover)
-
-
         return mRandom.nextInt(3 -1)+1
-
     }
 
     fun jugarya(){
-        var i=0
-        val slot= arrayListOf("avion","camion","tren")
-        while (i<=50000000) {
-            val s1 = moverimagenes()
-            val s2 = moverimagenes()
-            val s3 = moverimagenes()
+        val s1=moverimagenes()
+        val s2=moverimagenes()
+        val s3=moverimagenes()
 
-            if (s1==1){
-                slotimagen1()
-            }
-            i=i+1
+        if((s1==1)&&(s2==2)&&(s3==3)){
+            slotimagen1()
+            slotimagen2()
+            slotimagen3()
+        }else if((s1==3)&&(s2==1)&&(s3==2)){
+            slot13()
+            slot21()
+            slot32()
+        }else if((s1==2)&&(s2==3)&&(s3==1)){
+            slot12()
+            slot23()
+            slot31()
+        }else if((s1==1)&&(s2==1)&&(s3==1)){
+            slotimagen1()
+            slot21()
+            slot31()
+        }else if((s1==2)&&(s2==2)&&(s3==2)){
+            slot12()
+            slotimagen2()
+            slot32()
+        }else if((s1==3)&&(s2==3)&&(s3==3)){
+            slot13()
+            slot23()
+            slotimagen3()
+        }else if((s1==1)&&(s2==1)&&(s3==2)){
+            slotimagen1()
+            slot21()
+            slot32()
+        }else if((s1==1)&&(s2==1)&&(s3==3)){
+            slotimagen1()
+            slot21()
+            slotimagen3()
+        }else if((s1==1)&&(s2==2)&&(s3==1)){
+            slotimagen1()
+            slotimagen2()
+            slot31()
+        }else if((s1==1)&&(s2==3)&&(s3==1)){
+            slotimagen1()
+            slot23()
+            slot31()
+        }else if((s1==2)&&(s2==1)&&(s3==1)){
+            slot12()
+            slot21()
+            slot31()
+        }else if((s1==3)&&(s2==1)&&(s3==1)){
+            slot13()
+            slot21()
+            slot31()
         }
-
-
+    }
+    fun slot12(){
+        Vista1.setImageResource(R.drawable.camion)
+    }
+    fun slot13(){
+        Vista1.setImageResource(R.drawable.tren)
     }
 
+    fun slot21(){
+        Vista2.setImageResource(R.drawable.avion)
+    }
+    fun slot23(){
+        Vista2.setImageResource(R.drawable.tren)
+    }
+    fun slot31(){
+        Vista3.setImageResource(R.drawable.avion)
+    }
+    fun slot32(){
+        Vista3.setImageResource(R.drawable.camion)
+    }
     fun slotimagen1(){
         Vista1.setImageResource(R.drawable.avion)
     }
-
     fun slotimagen2(){
         Vista2.setImageResource(R.drawable.camion)
     }
