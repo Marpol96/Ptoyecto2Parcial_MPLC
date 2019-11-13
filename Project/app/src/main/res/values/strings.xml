@@ -16,8 +16,5 @@
     <string name="text_Apuesta">10</string>
     <string name="text_Apuestatitulo">Apuesta</string>
 
-    <string name="Button_Subir">Subir</string>
-    <string name="Button_Bajar">Bajar</string>
-
     <string name="Button_Acerca">Acerca de...</string>
 </resources>

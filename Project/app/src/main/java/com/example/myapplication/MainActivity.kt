@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,19 +14,13 @@ class MainActivity : AppCompatActivity() {
 
     val mRandom=Random()
 
+    val a: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Button_Play.setOnClickListener{
+        Button_Play.setOnClickListener {
             ChekcApuesta()
-        }
-        button_Subir.setOnClickListener(){
-            val Apuesta=Integer.valueOf(text_apues.text.toString())
-            if(text_apues.text.toString()<text_Credit.text.toString()){
-                Apuesta==Apuesta+10
-                text_apues.setText(Apuesta)
-            }
         }
     }
 
@@ -38,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun moverimagenes(): Int {
-        return mRandom.nextInt(4 -1)+1
+        return mRandom.nextInt(3 -1)+1
     }
 
     fun jugarya(){
