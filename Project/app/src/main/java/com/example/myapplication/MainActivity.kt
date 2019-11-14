@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         slotimagen1()
         slotimagen2()
         slotimagen3()
-        button_Bonus.setOnClickListener{Bonus(estado)}
+        button_Bonus.setOnClickListener{
+            Bonus(estado)}
         Button_Play.setOnClickListener {
             ChekcApuesta()
         }
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         button_Bonus.setOnClickListener{
             if (e == "Gano") {
                 Toast.makeText(this, "Ganaste Ahora Puedes Ganar 20 Puntos!", Toast.LENGTH_LONG).show()
+
             } else if (e == "Perdio") {
                 Toast.makeText(this, "Opcion Inhabilitada Por El Momento, Disponilble Solo Al Ganar!", Toast.LENGTH_LONG).show()
             }
