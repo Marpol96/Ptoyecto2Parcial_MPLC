@@ -125,12 +125,12 @@
         tools:text="@string/text_Apuesta" />
 
     <Button
-        android:id="@+id/button_Acerca"
+        android:id="@+id/button_Bonus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Button_Acerca"
+        android:text="@string/Button_Bonus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/Button_Acerca" />
+        tools:text="@string/Button_Bonus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

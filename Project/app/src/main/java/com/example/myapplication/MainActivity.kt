@@ -5,14 +5,17 @@ import android.os.Bundle
 import android.text.Editable
 import android.view.Gravity
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.R.id.button_Bonus
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Random
 
 class MainActivity : AppCompatActivity() {
-
+    var estado:String="Perdio"
     val mRandom=Random()
     var g:Int= 100
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,27 +24,40 @@ class MainActivity : AppCompatActivity() {
         slotimagen1()
         slotimagen2()
         slotimagen3()
-
+        button_Bonus.setOnClickListener{Bonus(estado)}
         Button_Play.setOnClickListener {
             ChekcApuesta()
         }
     }
 
     fun ChekcApuesta(){
-        if(text_Credit.text=="0"){
+        if(text_Credit.text =="0"){
             Toast.makeText(this,"No se Puede Empezar Sin Un Credito Disponible",Toast.LENGTH_SHORT).show()
             Toast.makeText(this,"El Juego Se Reiniciara!",Toast.LENGTH_SHORT).show()
+            text_Credit.setText("100")
             g=100
         }else{
             Toast.makeText(this,"Suerte!",Toast.LENGTH_SHORT).show()
             jugarya()
         }
     }
+    fun Bonus(e:String){
+        button_Bonus.setOnClickListener{
+            if (e == "Gano") {
+                Toast.makeText(this, "Ganaste Ahora Puedes Ganar 20 Puntos!", Toast.LENGTH_LONG).show()
+            } else if (e == "Perdio") {
+                Toast.makeText(this, "Opcion Inhabilitada Por El Momento, Disponilble Solo Al Ganar!", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
     fun Ganar(){
+        estado="Gano"
+        Bonus(estado)
         g=g+10
         text_Credit.text=g.toString()
     }
     fun Perder(){
+        estado="Perdio"
         g=g-10
         text_Credit.text=g.toString()
     }
@@ -197,6 +213,8 @@ class MainActivity : AppCompatActivity() {
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else{
+            estado="Perdio"
+            Bonus(estado)
             Toast.makeText(this,"No Existe Combinacion!",Toast.LENGTH_SHORT).show()
         }
     }
