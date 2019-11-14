@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         slotimagen2()
         slotimagen3()
         button_Bonus.setOnClickListener{
-            Bonus(estado)}
+            Bonus(estado)
+        }
         Button_Play.setOnClickListener {
             ChekcApuesta()
         }
@@ -64,151 +65,151 @@ class MainActivity : AppCompatActivity() {
         text_Credit.text=g.toString()
     }
     fun moverimagenes(): Int {
-        return mRandom.nextInt(3 -1)+1
+        return mRandom.nextInt(9 -1)+1
     }
     fun jugarya(){
         val s1=moverimagenes()
         val s2=moverimagenes()
         val s3=moverimagenes()
 
-        if((s1==1)&&(s2==2)&&(s3==3)){
+        if(((s1==1)||(s1==2)||(s1==3))&&((s2==4)||s2==5||s2==6)&&((s3==7)||(s3==8)||(s3==9))){
             slotimagen1()
             slotimagen2()
             slotimagen3()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==1)&&(s3==2)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==1)&&(s3==2)){
             slot13()
             slot21()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==3)&&(s3==1)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==3)&&(s3==1)){
             slot12()
             slot23()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==1)&&(s3==1)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==1)&&(s3==1)){
             slotimagen1()
             slot21()
             slot31()
             Ganar()
             Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==2)&&(s3==2)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==2)&&(s3==2)){
             slot12()
             slotimagen2()
             slot32()
             Ganar()
             Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==3)&&(s3==3)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==3)&&(s3==3)){
             slot13()
             slot23()
             slotimagen3()
             Ganar()
             Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==1)&&(s3==2)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==1)&&(s3==2)){
             slotimagen1()
             slot21()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==1)&&(s3==3)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==1)&&(s3==3)){
             slotimagen1()
             slot21()
             slotimagen3()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==2)&&(s3==1)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==2)&&(s3==1)){
             slotimagen1()
             slotimagen2()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==3)&&(s3==1)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==3)&&(s3==1)){
             slotimagen1()
             slot23()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==1)&&(s3==1)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==1)&&(s3==1)){
             slot12()
             slot21()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==1)&&(s3==1)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==1)&&(s3==1)){
             slot13()
             slot21()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==2)&&(s3==1)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==2)&&(s3==1)){
             slot12()
             slotimagen2()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==2)&&(s3==3)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==2)&&(s3==3)){
             slot12()
             slotimagen2()
             slotimagen3()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==1)&&(s3==2)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==1)&&(s3==2)){
             slot12()
             slot21()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==3)&&(s3==2)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==3)&&(s3==2)){
             slot12()
             slot23()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==2)&&(s3==2)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==2)&&(s3==2)){
             slotimagen1()
             slotimagen2()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==2)&&(s3==2)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==2)&&(s3==2)){
             slot13()
             slotimagen2()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==3)&&(s3==1)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==3)&&(s3==1)){
             slot13()
             slot23()
             slot31()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==3)&&(s3==2)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==3)&&(s3==2)){
             slot13()
             slot23()
             slot32()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==1)&&(s3==3)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==1)&&(s3==3)){
             slot13()
             slot21()
             slotimagen3()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==3)&&(s2==2)&&(s3==3)){
+        }else if(((s1==7)||(s1==8)||(s1==9))&&(s2==2)&&(s3==3)){
             slot13()
             slotimagen2()
             slotimagen3()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==1)&&(s2==3)&&(s3==3)){
+        }else if(((s1==1)||(s1==2)||(s1==3))&&(s2==3)&&(s3==3)){
             slotimagen1()
             slot23()
             slotimagen3()
             Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
-        }else if((s1==2)&&(s2==3)&&(s3==3)){
+        }else if(((s1==4)||(s1==5)||(s1==6))&&(s2==3)&&(s3==3)){
             slot12()
             slot23()
             slotimagen3()
