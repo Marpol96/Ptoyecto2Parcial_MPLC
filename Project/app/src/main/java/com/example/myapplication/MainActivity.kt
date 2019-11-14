@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        slotimagen1()
+        slotimagen2()
+        slotimagen3()
+
         Button_Play.setOnClickListener {
             ChekcApuesta()
         }
@@ -24,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     fun ChekcApuesta(){
         if(text_Credit.text=="0"){
-            Toast.makeText(this,"No se Puede Empesar Sin Un Credito Disponible",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"No se Puede Empezar Sin Un Credito Disponible",Toast.LENGTH_SHORT).show()
             Toast.makeText(this,"El Juego Se Reiniciara!",Toast.LENGTH_SHORT).show()
             g=100
         }else{
