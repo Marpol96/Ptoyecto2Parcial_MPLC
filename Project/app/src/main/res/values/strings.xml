@@ -13,5 +13,5 @@
     <string name="text_Instrucciones">BONUS->Para Ganar en el bonus debes escribir un numero en el rango de 1-9, si adivinas el digito ganas el bonus, Suerte!; Si el juego llega a Credito=0 Se Reinicia Y Comienza De Nuevo</string>
     <string name="text_vistaNumeroOculto">X</string>
     <string name="text_Titulo">Bienvenido Al Bonus</string>
-    <string name="text_pedrNumero">Ing. Numero</string>
+    <string name="text_pedrNumero">Numero</string>
 </resources>
