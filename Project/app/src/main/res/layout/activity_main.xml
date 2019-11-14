@@ -9,21 +9,6 @@
     tools:context=".MainActivity">
 
 
-
-    <TextView
-        android:id="@+id/text_Points"
-        android:layout_width="79dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="84dp"
-        android:text="@string/text_Points"
-        app:layout_constraintBottom_toTopOf="@+id/Vista1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        tools:text="@string/text_Points" />
-
     <TextView
         android:id="@+id/text_Credito"
         android:layout_width="79dp"
@@ -41,22 +26,6 @@
         tools:text="@string/text_Credito" />
 
     <TextView
-        android:id="@+id/text_Puntuacion"
-        android:layout_width="79dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginBottom="48dp"
-        android:text="@string/text_Puntuacion"
-        app:layout_constraintBottom_toTopOf="@+id/Vista2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409"
-        tools:text="@string/text_Puntuacion" />
-
-    <TextView
         android:id="@+id/text_Credit"
         android:layout_width="79dp"
         android:layout_height="33dp"
@@ -64,8 +33,6 @@
         android:text="@string/text_Credit"
         app:layout_constraintBottom_toTopOf="@+id/Vista1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
-        app:layout_constraintStart_toEndOf="@+id/text_Points"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.98"
         tools:text="@string/text_Credit" />

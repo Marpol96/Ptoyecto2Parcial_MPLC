@@ -13,9 +13,7 @@ import java.util.Random
 class MainActivity : AppCompatActivity() {
 
     val mRandom=Random()
-
-    val a: TextView? = null
-
+    var g:Int=1000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,17 +23,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun ChekcApuesta(){
-        if(text_apues.text.toString().isEmpty()){
+        if(text_apues.text.toString()=="0"){
             Toast.makeText(this,"No se Puede Empesar Sin Una Apuesta",Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(this,"Suerte!",Toast.LENGTH_SHORT).show()
             jugarya()
         }
     }
+    fun Ganar(){
+        g=g+10
+        text_Credit.text=g.toString()
+    }
     fun moverimagenes(): Int {
         return mRandom.nextInt(3 -1)+1
     }
-
     fun jugarya(){
         val s1=moverimagenes()
         val s2=moverimagenes()
@@ -45,98 +46,125 @@ class MainActivity : AppCompatActivity() {
             slotimagen1()
             slotimagen2()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==1)&&(s3==2)){
             slot13()
             slot21()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==3)&&(s3==1)){
             slot12()
             slot23()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==1)&&(s3==1)){
             slotimagen1()
             slot21()
             slot31()
+            Ganar()
+            Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==2)&&(s3==2)){
             slot12()
             slotimagen2()
             slot32()
+            Ganar()
+            Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==3)&&(s3==3)){
             slot13()
             slot23()
             slotimagen3()
+            Ganar()
+            Toast.makeText(this,"Felicidades, Ganaste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==1)&&(s3==2)){
             slotimagen1()
             slot21()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==1)&&(s3==3)){
             slotimagen1()
             slot21()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==2)&&(s3==1)){
             slotimagen1()
             slotimagen2()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==3)&&(s3==1)){
             slotimagen1()
             slot23()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==1)&&(s3==1)){
             slot12()
             slot21()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==1)&&(s3==1)){
             slot13()
             slot21()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==2)&&(s3==1)){
             slot12()
             slotimagen2()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==2)&&(s3==3)){
             slot12()
             slotimagen2()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==1)&&(s3==2)){
             slot12()
             slot21()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==3)&&(s3==2)){
             slot12()
             slot23()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==2)&&(s3==2)){
             slotimagen1()
             slotimagen2()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==2)&&(s3==2)){
             slot13()
             slotimagen2()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==3)&&(s3==1)){
             slot13()
             slot23()
             slot31()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==3)&&(s3==2)){
             slot13()
             slot23()
             slot32()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==1)&&(s3==3)){
             slot13()
             slot21()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==3)&&(s2==2)&&(s3==3)){
             slot13()
             slotimagen2()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==1)&&(s2==3)&&(s3==3)){
             slotimagen1()
             slot23()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if((s1==2)&&(s2==3)&&(s3==3)){
             slot12()
             slot23()
             slotimagen3()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(this,"No Existe Combinacion!",Toast.LENGTH_SHORT).show()
         }
@@ -147,7 +175,6 @@ class MainActivity : AppCompatActivity() {
     fun slot13(){
         Vista1.setImageResource(R.drawable.tren)
     }
-
     fun slot21(){
         Vista2.setImageResource(R.drawable.avion)
     }
@@ -166,10 +193,8 @@ class MainActivity : AppCompatActivity() {
     fun slotimagen2(){
         Vista2.setImageResource(R.drawable.camion)
     }
-
     fun slotimagen3(){
         Vista3.setImageResource((R.drawable.tren))
     }
 
     }
-
