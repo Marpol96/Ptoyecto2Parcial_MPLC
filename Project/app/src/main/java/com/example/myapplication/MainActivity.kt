@@ -1,5 +1,8 @@
 package com.example.myapplication
-
+/* Autor: Martin Paul Leiva Cruz
+    Clase: Programacion Orientada a Obejtos
+    Catedratico: Ing. Hector Sabillon
+ */
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -21,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Bonus("Perdio")
         slotimagen1()
         slotimagen2()
         slotimagen3()
@@ -30,12 +32,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*
+    Breve Explicacion
+    En este juego se gana de 4 maneras
+    1> sacando las tres imagenes de aviones
+    2> sacando las tres imagenes de Camiones
+    3> sacando las tres Imagenes de trenes
+    4> sacando en orden las imagenes >> Avion,Camion,Tren
+
+
+    El Bonus No se podra utilizar si no se ha ganado para ello se declaro una variable
+    estado donde variara y de esta dependera el bono
+
+    El Bono Consite en Adivinar un Numero Escondido en un textview
+    en intervalos del 1-9
+
+    el numero se mostrara luego de teclear bono y registrar numero pensado
+    se manejara un credito de 1000 con una apuesta estable de 10 esta variara en su defecto
+    si gana o pierde, si gana el bono son 20 los que gana y si lo pierde solo son 10 lo
+    que pierde.
+     */
     fun ChekcApuesta(){
         if(text_Credit.text =="0"){
             Toast.makeText(this,"No se Puede Empezar Sin Un Credito Disponible",Toast.LENGTH_SHORT).show()
             Toast.makeText(this,"El Juego Se Reiniciara!",Toast.LENGTH_SHORT).show()
-            text_Credit.setText("100")
-            g=100
+            text_Credit.setText("1000")
+            g=1000
         }else{
             Toast.makeText(this,"Suerte!",Toast.LENGTH_SHORT).show()
             jugarya()
@@ -52,16 +74,22 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Ganaste 20 Puntos!", Toast.LENGTH_LONG).show()
                     text_NumOculto.text=NO.toString()
                     estado="Perdio"
+                    Thread.sleep(5*1000)
                 }else{
                     Perder()
                     estado="Perdio"
                     text_NumOculto.text=NO.toString()
+                    Thread.sleep(5*1000)
                 }
             } else if (e == "Perdio") {
                 Toast.makeText(this, "Opcion Inhabilitada Por El Momento, Disponilble Solo Al Ganar!", Toast.LENGTH_LONG).show()
             }
         }
-        
+        text_NumOculto.text.toString()=="X"
+        Toast.makeText(this, "A Continuar Jugando!", Toast.LENGTH_LONG).show()
+        slotimagen1()
+        slotimagen2()
+        slotimagen3()
     }
     fun Ganar(){
         estado="Gano"
@@ -86,6 +114,7 @@ class MainActivity : AppCompatActivity() {
             slotimagen1()
             slotimagen2()
             slotimagen3()
+            Perder()
             Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }else if(((s1==7)||(s1==8)||(s1==9))&&((s2==1)||(s2==2)||(s2==3))&&((s3==4)||(s3==5)||(s3==6))){
             slot13()
@@ -228,7 +257,7 @@ class MainActivity : AppCompatActivity() {
         }else{
             estado="Perdio"
             Bonus(estado)
-            Toast.makeText(this,"No Existe Combinacion!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Perdiste!",Toast.LENGTH_SHORT).show()
         }
     }
     fun slot12(){
