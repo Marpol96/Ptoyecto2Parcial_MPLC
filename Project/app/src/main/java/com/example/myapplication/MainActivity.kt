@@ -14,8 +14,10 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R.id.button_Bonus
+import com.example.myapplication.R.id.text_pedir
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Random
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     var estado:String=""
@@ -73,23 +75,22 @@ class MainActivity : AppCompatActivity() {
                     text_Credit.text=g1.toString()
                     Toast.makeText(this, "Ganaste 20 Puntos!", Toast.LENGTH_LONG).show()
                     text_NumOculto.text=NO.toString()
-                    estado="Perdio"
                     Thread.sleep(5*1000)
+                    estado="Perdio"
                 }else{
                     Perder()
                     estado="Perdio"
-                    text_NumOculto.text=NO.toString()
                     Thread.sleep(5*1000)
+                    text_NumOculto.text=NO.toString()
                 }
             } else if (e == "Perdio") {
                 Toast.makeText(this, "Opcion Inhabilitada Por El Momento, Disponilble Solo Al Ganar!", Toast.LENGTH_LONG).show()
             }
+            Toast.makeText(this, "A Continuar Jugando!", Toast.LENGTH_LONG).show()
+            slot12()
+            slotimagen2()
+            slotimagen3()
         }
-        text_NumOculto.text.toString()=="X"
-        Toast.makeText(this, "A Continuar Jugando!", Toast.LENGTH_LONG).show()
-        slotimagen1()
-        slotimagen2()
-        slotimagen3()
     }
     fun Ganar(){
         estado="Gano"
@@ -106,6 +107,7 @@ class MainActivity : AppCompatActivity() {
         return mRandom.nextInt(9 -1)+1
     }
     fun jugarya(){
+        text_NumOculto.text="X"
         val s1=moverimagenes()
         val s2=moverimagenes()
         val s3=moverimagenes()

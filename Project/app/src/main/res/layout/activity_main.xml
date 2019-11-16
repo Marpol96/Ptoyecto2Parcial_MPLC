@@ -8,6 +8,7 @@
     android:alwaysDrawnWithCache="false"
     android:animateLayoutChanges="false"
     android:animationCache="false"
+    android:background="#9575CD"
     android:backgroundTintMode="screen"
     tools:context=".MainActivity">
 
@@ -16,35 +17,44 @@
         android:id="@+id/text_Credito"
         android:layout_width="79dp"
         android:layout_height="33sp"
-        android:layout_marginStart="16sp"
-        android:layout_marginTop="71sp"
         android:breakStrategy="high_quality"
         android:fontFamily="Roboto"
         android:text="@string/text_Credito"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/Vista3"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Play"
         app:layout_constraintEnd_toStartOf="@+id/text_Credit"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.621"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.26"
         tools:text="@string/text_Credito" />
 
     <TextView
         android:id="@+id/text_Credit"
         android:layout_width="79sp"
         android:layout_height="33sp"
-        android:layout_marginTop="84sp"
-        android:text="@string/text_Credit"
         android:fontFamily=""
+        android:text="@string/text_Credit"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/Vista1"
+        app:layout_constraintBottom_toBottomOf="@+id/Vista1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
+        app:layout_constraintVertical_bias="0.29"
         tools:text="@string/text_Credit" />
+
+    <View
+        android:id="@+id/sloter"
+        android:layout_width="413dp"
+        android:layout_height="148dp"
+        android:background="@drawable/slots"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_Credito" />
 
     <ImageView
         android:id="@+id/Vista1"
@@ -53,47 +63,43 @@
         android:layout_marginStart="4sp"
         android:contentDescription="@string/Vista1"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282"
+        app:layout_constraintTop_toBottomOf="@+id/text_Credito"
         app:srcCompat="@android:drawable/btn_star_big_on"
-        tools:visibility="visible" />
-
-    <ImageView
-        android:id="@+id/Vista3"
-        android:fontFamily="Roboto"
-        android:layout_width="123sp"
-        android:layout_height="132sp"
-        android:layout_marginBottom="4sp"
-        android:contentDescription="@string/Vista3"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.990"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282"
-        app:srcCompat="@android:drawable/ic_lock_lock"
         tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/Vista2"
         android:layout_width="128sp"
-        android:fontFamily="Roboto"
         android:layout_height="135sp"
-        android:layout_marginTop="130sp"
         android:contentDescription="@string/Vista2"
+        android:fontFamily="Roboto"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/Button_Play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402"
+        app:layout_constraintTop_toBottomOf="@+id/text_Credito"
+        app:layout_constraintVertical_bias="0.488"
         app:srcCompat="@android:drawable/presence_online"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/Vista3"
+        android:layout_width="123sp"
+        android:layout_height="132sp"
+        android:contentDescription="@string/Vista3"
+        android:fontFamily="Roboto"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/Button_Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.990"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_Credito"
+        app:srcCompat="@android:drawable/ic_lock_lock"
         tools:visibility="visible" />
 
     <Button
@@ -101,17 +107,15 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="100sp"
         android:layout_height="50sp"
-        android:textColor="#000000"
+        android:layout_marginBottom="284dp"
         android:fontFamily="Roboto"
-        android:layout_marginBottom="324sp"
         android:text="@string/Button_Play"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/text_apuesta"
@@ -145,6 +149,18 @@
         app:layout_constraintVertical_bias="0.063"
         tools:text="@string/text_Apuesta" />
 
+    <View
+        android:id="@+id/VistaBonus"
+        android:layout_width="440dp"
+        android:layout_height="263dp"
+        android:background="#EDE7F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Text_Titulo"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/button_Bonus"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -157,20 +173,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="@string/Button_Bonus" />
-
-    <TextView
-        android:id="@+id/Instrucciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:fontFamily="Roboto"
-        android:text="@string/text_Instrucciones"
-        app:layout_constraintBottom_toTopOf="@+id/text_Credito"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#000000"
-        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/Text_Titulo"
