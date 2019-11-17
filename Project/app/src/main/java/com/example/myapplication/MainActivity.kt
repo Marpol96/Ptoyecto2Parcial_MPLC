@@ -3,18 +3,21 @@ package com.example.myapplication
     Clase: Programacion Orientada a Obejtos
     Catedratico: Ing. Hector Sabillon
  */
+import android.annotation.SuppressLint
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.sax.EndElementListener
 import android.text.Editable
 import android.view.Gravity
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.R.id.button_Bonus
-import com.example.myapplication.R.id.text_pedir
+import com.example.myapplication.R.id.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Random
 import kotlin.concurrent.thread
@@ -34,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*
+    /* comentarios de la app
     Breve Explicacion
     En este juego se gana de 4 maneras
     1> sacando las tres imagenes de aviones
@@ -107,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         return mRandom.nextInt(9 -1)+1
     }
     fun jugarya(){
-        text_NumOculto.text="X"
+        text_NumOculto.setText("X")
         val s1=moverimagenes()
         val s2=moverimagenes()
         val s3=moverimagenes()
@@ -291,3 +294,4 @@ class MainActivity : AppCompatActivity() {
     }
 
     }
+
