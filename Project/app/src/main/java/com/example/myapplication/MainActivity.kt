@@ -86,8 +86,6 @@ class MainActivity : AppCompatActivity() {
                     Thread.sleep(5*1000)
                     text_NumOculto.text=NO.toString()
                 }
-            } else if (e == "Perdio") {
-                Toast.makeText(this, "Opcion Inhabilitada Por El Momento, Disponilble Solo Al Ganar!", Toast.LENGTH_LONG).show()
             }
             Toast.makeText(this, "A Continuar Jugando!", Toast.LENGTH_LONG).show()
             slot12()
@@ -103,6 +101,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun Perder(){
         estado="Perdio"
+        Bonus(estado)
         g=g-10
         text_Credit.text=g.toString()
     }
